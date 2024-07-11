@@ -21,4 +21,9 @@ jobs:
         run: terraform plan -out=tfplan
       - name: Terraform Apply
         run: terraform apply -auto-approve
-
+      - name: Wait for 5 minutes
+        uses: jakejarvis/wait-action@master
+        with:
+          time: '5m' # 等待5分钟
+      - name: Terraform Destroy
+         run: terraform destroy -auto-approve
