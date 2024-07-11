@@ -12,7 +12,6 @@ terraform {
 #provider block
 provider "aws" {
   region  = var.aws_region
-  profile = "zjwangao"
 }
 
 resource "aws_instance" "ec2_demo" {
