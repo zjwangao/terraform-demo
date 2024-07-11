@@ -26,4 +26,4 @@ jobs:
         with:
           time: '5m' # 等待5分钟
       - name: Terraform Destroy
-         run: terraform destroy -auto-approve
+        run: terraform destroy -auto-approve
